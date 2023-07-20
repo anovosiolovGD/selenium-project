@@ -1,19 +1,20 @@
+package testSteps;
+
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 import pages.CreateAccountPage;
 import pages.HomePage;
 import pages.RealRewardAccountPage;
 import sidebars.AccountSidebar;
-import testSteps.OpenPageSteps;
 
 import static driver.DriverManager.getDriver;
+import static utils.TestProperties.homepageUrl;
 
 public class CreateAccountTestSteps {
 
     public void openHomePage() {
         OpenPageSteps openPage = new OpenPageSteps();
-        String homepage = "https://www.ae.com/";
-        openPage.openHomePage(homepage);
+        openPage.openPage(homepageUrl);
     }
 
     public void acceptPrivacyIfDisplayed() {

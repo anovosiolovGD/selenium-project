@@ -1,18 +1,20 @@
+package testSteps;
+
 import driver.DriverManager;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
-import pages.SearchResultsPage;
 import pages.HomePage;
-import testSteps.OpenPageSteps;
+import pages.SearchResultsPage;
 import sidebars.SearchSidebar;
 
 import static driver.DriverManager.getDriver;
+import static utils.TestProperties.homepageUrl;
+
 
 public class SearchProductTestSteps {
     public void openHomePage() {
         OpenPageSteps openPage = new OpenPageSteps();
-        String homepage = "https://www.ae.com/";
-        openPage.openHomePage(homepage);
+        openPage.openPage(homepageUrl);
     }
 
     public void acceptPrivacyIfDisplayed() {
@@ -20,14 +22,12 @@ public class SearchProductTestSteps {
         if (homePage.acceptPrivacyButton.isDisplayed()) {
             homePage.acceptPrivacyButton.click();
         }
-
     }
 
     public void clickHeaderSearchButton() {
         HomePage homePage = new HomePage();
         Actions actions = new Actions(getDriver());
         actions.moveToElement(homePage.headerSearchButton).click().perform();
-
     }
 
     public void inputSearchProductId(String productId) {

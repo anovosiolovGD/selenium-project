@@ -1,3 +1,5 @@
+package testSteps;
+
 import driver.DriverManager;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
@@ -5,15 +7,14 @@ import pages.HomePage;
 import sidebars.AccountSidebar;
 import sidebars.LoggedInAccountSidebar;
 import sidebars.SignInSidebar;
-import testSteps.OpenPageSteps;
 
 import static driver.DriverManager.getDriver;
+import static utils.TestProperties.homepageUrl;
 
 public class LoginTestSteps {
     public void openHomePage() {
         OpenPageSteps openPage = new OpenPageSteps();
-        String homepage = "https://www.ae.com/";
-        openPage.openHomePage(homepage);
+        openPage.openPage(homepageUrl);
     }
 
     public void acceptPrivacyIfDisplayed() {
@@ -21,7 +22,7 @@ public class LoginTestSteps {
         if (homePage.acceptPrivacyButton.isDisplayed()) {
             homePage.acceptPrivacyButton.click();
             homePage.acceptPrivacyButton = null;
-        } else return;
+        }
 
     }
 
