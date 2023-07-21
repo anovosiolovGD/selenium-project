@@ -34,7 +34,7 @@ public class CreateAccountPage extends BasePage{
     @FindBy(css = ".aeo-checkbox-label")
     public WebElement acceptConditionsCheckbox;
 
-    @FindBy(css = "[data-test-btn='register']")
+    @FindBy(css = ".qa-btn-register")
     public WebElement createAccountButton;
     public CreateAccountPage (){
         super();

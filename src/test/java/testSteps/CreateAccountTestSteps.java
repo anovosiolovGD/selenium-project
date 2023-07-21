@@ -17,12 +17,9 @@ public class CreateAccountTestSteps {
         openPage.openPage(homepageUrl);
     }
 
-    public void acceptPrivacyIfDisplayed() {
+    public void acceptPrivacy(){
         HomePage homePage = new HomePage();
-        if (homePage.acceptPrivacyButton.isDisplayed()) {
-            homePage.acceptPrivacyButton.click();
-            homePage.acceptPrivacyButton = null;
-        }
+        homePage.acceptPrivacyButton.click();
     }
 
     public void clickAccountButton() {
@@ -85,7 +82,8 @@ public class CreateAccountTestSteps {
     }
     public void clickAccount(){
         RealRewardAccountPage accountPage = new RealRewardAccountPage();
-        accountPage.headerAccountButton.click();
+        Actions action = new Actions(getDriver());
+        action.moveToElement(accountPage.headerAccountButton).click().perform();
     }
 
     public void assertResult() {
