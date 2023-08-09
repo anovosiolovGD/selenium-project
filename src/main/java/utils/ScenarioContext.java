@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ScenarioContext {
-    private static ScenarioContext instance = new ScenarioContext();
+    private static ScenarioContext instance;
     private static final Map<String, Object> contextMap;
 
     static {

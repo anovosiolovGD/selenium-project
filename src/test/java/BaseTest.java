@@ -1,16 +1,15 @@
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeSuite;
 import utils.ScenarioContext;
 
 import static utils.RandomEmailGenerator.generateRandomEmail;
 
 public class BaseTest {
-    private String email;
-    private ScenarioContext context;
+    protected ScenarioContext context;
 
-    @BeforeTest
-    private void prepareTestData() {
-        email = generateRandomEmail();
+    @BeforeSuite
+    public void prepareTestData() {
+        String email = generateRandomEmail();
         context = ScenarioContext.getInstance();
         context.put("email", email);
         context.put("firstname", "andy");
