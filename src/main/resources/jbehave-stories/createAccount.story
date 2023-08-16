@@ -13,7 +13,7 @@ When user input email - "testtestteswiiaasdpolke2333@mail.org"
 When input firstname - "test"
 When input lastname - "test"
 When input password - "Testtest1"
-When confirm password - "Testtest1"
+When confirm password - Testtest1
 When input zipcode - "99950"
 When input birthdate - "August" , "7"
 When user accept conditions

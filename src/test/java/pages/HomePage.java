@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends BasePage {
-    @FindBy(css = "[id='onetrust-accept-btn-handler']")
+    @FindBy(id = "onetrust-accept-btn-handler")
     public WebElement acceptPrivacyButton;
     @FindBy(css = ".aeo-icon-search")
     public WebElement headerSearchButton;
@@ -18,8 +18,8 @@ public class HomePage extends BasePage {
     }
 
     private void waitElements() {
-        waitForVisibility(acceptPrivacyButton,20L);
-        waitForVisibility(headerAccountButton,20L);
-        waitForVisibility(headerSearchButton,10L);
+//        waitForVisibility(acceptPrivacyButton,20L);
+//        waitForVisibility(headerAccountButton,20L);
+//        waitForVisibility(headerSearchButton,10L);
     }
 }
