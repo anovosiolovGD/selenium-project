@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class CreateAccountPage extends BasePage{
-    @FindBy(css = "[placeholder='Email']")
+    @FindBy(xpath = "//*[@placeholder='Email']")
     public WebElement emailField;
 
     @FindBy(css = "[name='firstname']")
@@ -38,8 +38,7 @@ public class CreateAccountPage extends BasePage{
     public WebElement createAccountButton;
     public CreateAccountPage (){
         super();
-        waitForVisibility(emailField,30L);
-        waitForVisibility(acceptConditionsCheckbox,30L);
+        driverImplicitlyWait(20L);
     }
 
 }

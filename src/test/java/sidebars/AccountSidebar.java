@@ -7,13 +7,13 @@ import pages.BasePage;
 import java.time.Duration;
 
 public class AccountSidebar extends BasePage {
-    @FindBy(css = "[name=signin]")
+    @FindBy(css = ".qa-btn-signin")
     public WebElement signInButton;
 
     @FindBy(css = ".btn-sign-out")
     public WebElement signOutButton;
 
-    @FindBy(css = ".qa-btn-register")
+    @FindBy(xpath = "//*[contains (@class,\"qa-btn-register\")]")
     public WebElement createAccountButton;
 
     public AccountSidebar (){
