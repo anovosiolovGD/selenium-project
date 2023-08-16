@@ -14,7 +14,7 @@ public class TestDataUtil {
 
     static {
         try {
-            reader = new FileReader("/Users/anovosiolov/Desktop/UI-testing-task/src/main/resources/testdata.properties");
+            reader = new FileReader("src/main/resources/testdata.properties");
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }

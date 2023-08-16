@@ -1,5 +1,4 @@
 # Default ignored files
-!target/allure-reports
 /shelf/
 /.idea/
 target/*
